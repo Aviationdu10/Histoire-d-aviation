@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Histoire des Avions</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#64748b'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+}
+.hero-section {
+background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('https://static.readdy.ai/image/314e0e93b47f0b5ee2f98cb86563dcc4/9936f53cb9df9c1d0d5a92a19e8387d3.jpeg');
+background-size: cover;
+background-position: center;
+}
+.timeline-container::-webkit-scrollbar {
+height: 8px;
+}
+.timeline-container::-webkit-scrollbar-track {
+background: #f1f1f1;
+border-radius: 10px;
+}
+.timeline-container::-webkit-scrollbar-thumb {
+background: #3b82f6;
+border-radius: 10px;
+}
+.timeline-container::-webkit-scrollbar-thumb:hover {
+background: #2563eb;
+}
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+grid-auto-rows: 250px;
+grid-gap: 16px;
+}
+.gallery-item:nth-child(3n+1) {
+grid-row: span 2;
+}
+.gallery-item:nth-child(4n) {
+grid-column: span 2;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Header -->
+<header class="bg-white shadow-md">
+<div class="container mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<a href="#" class="text-3xl font-['Pacifico'] text-primary">Histoire des Avions</a>
+</div>
+<nav class="hidden md:flex space-x-8">
+<a href="#" class="text-gray-800 font-medium hover:text-primary transition">Accueil</a>
+<a href="#chronologie" class="text-gray-800 font-medium hover:text-primary transition">Chronologie</a>
+<a href="#types" class="text-gray-800 font-medium hover:text-primary transition">Types d'Avions</a>
+<a href="#galerie" class="text-gray-800 font-medium hover:text-primary transition">Galerie</a>
+<a href="#contact" class="text-gray-800 font-medium hover:text-primary transition">Contact</a>
+</nav>
+<div class="flex items-center">
+<div class="relative">
+<input type="text" placeholder="Rechercher..." class="py-2 pl-10 pr-4 w-64 rounded-button border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm">
+<div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-search-line"></i>
+</div>
+</div>
+<button class="md:hidden ml-4 w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section min-h-[600px] flex items-center">
+<div class="container mx-auto px-6 w-full">
+<div class="max-w-xl">
+<h1 class="text-5xl font-bold text-white mb-4">L'Excellence de l'Aviation Moderne</h1>
+<p class="text-xl text-gray-100 mb-8">Découvrez l'histoire fascinante de l'aviation à travers les âges, des premiers vols aux avions modernes comme l'Airbus A320.</p>
+<div class="bg-white/20 backdrop-blur-sm p-6 rounded-lg mb-8">
+<h3 class="text-xl font-semibold text-white mb-3">Airbus A320</h3>
+<div class="grid grid-cols-3 gap-4">
+<div class="text-center">
+<p class="text-sm text-gray-200">Mise en service</p>
+<p class="text-lg font-bold text-white">1988</p>
+</div>
+<div class="text-center">
+<p class="text-sm text-gray-200">Constructeur</p>
+<p class="text-lg font-bold text-white">Airbus</p>
+</div>
+<div class="text-center">
+<p class="text-sm text-gray-200">Capacité</p>
+<p class="text-lg font-bold text-white">150-180 passagers</p>
+</div>
+</div>
+</div>
+<a href="https://readdy.ai/home/b0a5c965-952e-46c2-8992-b4edc19aa628/81c542b0-2754-4e13-8712-fbdcdc757c51" data-readdy="true" class="inline-block bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-button font-medium transition shadow-lg hover:shadow-xl !rounded-button whitespace-nowrap">Découvrir l'A320</a>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section id="chronologie" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl font-bold text-center mb-12">Chronologie de l'Aviation</h2>
+<div class="timeline-container overflow-x-auto pb-6">
+<div class="min-w-[1200px]">
+<div class="relative">
+<div class="absolute top-1/2 left-0 right-0 h-1 bg-gray-200 -translate-y-1/2"></div>
+<div class="flex justify-between relative">
+<!-- Timeline Items -->
+<div class="timeline-item text-center">
+<div class="w-16 h-16 rounded-full bg-gray-100 border-4 border-primary mx-auto mb-4 relative z-10 flex items-center justify-center">
+<img src="https://public.readdy.ai/ai/img_res/64b65d2a98aca40eee60d7db24d81427.jpg" alt="Premier vol" class="w-12 h-12 rounded-full object-cover">
+</div>
+<div class="font-bold">1903</div>
+<p class="text-sm max-w-[150px] mx-auto">Premier vol motorisé des frères Wright</p>
+</div>
+<div class="timeline-item text-center">
+<div class="w-16 h-16 rounded-full bg-gray-100 border-4 border-gray-300 mx-auto mb-4 relative z-10 flex items-center justify-center">
+<img src="https://public.readdy.ai/ai/img_res/db8bdb6b4e4c19200d1df7a46f358350.jpg" alt="Traversée Atlantique" class="w-12 h-12 rounded-full object-cover">
+</div>
+<div class="font-bold">1927</div>
+<p class="text-sm max-w-[150px] mx-auto">Première traversée de l'Atlantique par Lindbergh</p>
+</div>
+<div class="timeline-item text-center">
+<div class="w-16 h-16 rounded-full bg-gray-100 border-4 border-gray-300 mx-auto mb-4 relative z-10 flex items-center justify-center">
+<img src="https://public.readdy.ai/ai/img_res/29b1731e3392376ea60b315571b6d166.jpg" alt="Premier avion à réaction" class="w-12 h-12 rounded-full object-cover">
+</div>
+<div class="font-bold">1952</div>
+<p class="text-sm max-w-[150px] mx-auto">Premier avion de ligne à réaction (De Havilland Comet)</p>
+</div>
+<div class="timeline-item text-center">
+<div class="w-16 h-16 rounded-full bg-gray-100 border-4 border-gray-300 mx-auto mb-4 relative z-10 flex items-center justify-center">
+<img src="https://public.readdy.ai/ai/img_res/16bb5ccc8ed89932148782d88989f1ae.jpg" alt="Boeing 747" class="w-12 h-12 rounded-full object-cover">
+</div>
+<div class="font-bold">1969</div>
+<p class="text-sm max-w-[150px] mx-auto">Premier vol du Boeing 747</p>
+</div>
+<div class="timeline-item text-center">
+<div class="w-16 h-16 rounded-full bg-gray-100 border-4 border-gray-300 mx-auto mb-4 relative z-10 flex items-center justify-center">
+<img src="https://public.readdy.ai/ai/img_res/db4949ac9ddcc5cce16fc35e0952772f.jpg" alt="Concorde" class="w-12 h-12 rounded-full object-cover">
+</div>
+<div class="font-bold">1976</div>
+<p class="text-sm max-w-[150px] mx-auto">Mise en service du Concorde</p>
+</div>
+<div class="timeline-item text-center">
+<div class="w-16 h-16 rounded-full bg-gray-100 border-4 border-primary mx-auto mb-4 relative z-10 flex items-center justify-center">
+<img src="https://public.readdy.ai/ai/img_res/01aebcf9339d0241c5891aeda43d5263.jpg" alt="A320" class="w-12 h-12 rounded-full object-cover">
+</div>
+<div class="font-bold">1988</div>
+<p class="text-sm max-w-[150px] mx-auto">Mise en service de l'Airbus A320</p>
+</div>
+<div class="timeline-item text-center">
+<div class="w-16 h-16 rounded-full bg-gray-100 border-4 border-gray-300 mx-auto mb-4 relative z-10 flex items-center justify-center">
+<img src="https://public.readdy.ai/ai/img_res/da661874afbd4357f17240390602bca2.jpg" alt="A380" class="w-12 h-12 rounded-full object-cover">
+</div>
+<div class="font-bold">2007</div>
+<p class="text-sm max-w-[150px] mx-auto">Premier vol commercial de l'A380</p>
+</div>
+<div class="timeline-item text-center">
+<div class="w-16 h-16 rounded-full bg-gray-100 border-4 border-gray-300 mx-auto mb-4 relative z-10 flex items-center justify-center">
+<img src="https://public.readdy.ai/ai/img_res/055d5c1f8b54dc34322a0ec6c17d21b4.jpg" alt="Solar Impulse" class="w-12 h-12 rounded-full object-cover">
+</div>
+<div class="font-bold">2016</div>
+<p class="text-sm max-w-[150px] mx-auto">Tour du monde de Solar Impulse</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section id="types" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl font-bold text-center mb-12">Catégories d'Avions</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Commercial Aircraft -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/1af9fe3fb27074a3f85326cf6d51c277.jpg" alt="Avions Commerciaux" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-3">Avions Commerciaux</h3>
+<p class="text-gray-600 mb-4">Découvrez l'évolution des avions de ligne, des premiers appareils aux jets modernes comme l'A320, qui ont révolutionné le transport aérien de passagers.</p>
+<a href="https://readdy.ai/home/b0a5c965-952e-46c2-8992-b4edc19aa628/6fa4dbeb-c7b6-4e0b-b381-d4dbac8c9c72" data-readdy="true" class="inline-block bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-button font-medium transition !rounded-button whitespace-nowrap">En savoir plus</a>
+</div>
+</div>
+<!-- Military Aircraft -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/ef26c4bd4ceb428ba555ce37215a5f51.jpg" alt="Aviation Militaire" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-3">Aviation Militaire</h3>
+<p class="text-gray-600 mb-4">Explorez l'histoire des avions militaires, des premiers biplans aux chasseurs supersoniques et drones modernes qui ont transformé les stratégies de défense.</p>
+<a href="https://readdy.ai/home/b0a5c965-952e-46c2-8992-b4edc19aa628/6fa4dbeb-c7b6-4e0b-b381-d4dbac8c9c72" data-readdy="true" class="inline-block bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-button font-medium transition !rounded-button whitespace-nowrap">En savoir plus</a>
+</div>
+</div>
+<!-- Technological Innovations -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/8fb5cbf748ed3d15fd9f620b33181bf0.jpg" alt="Innovations Technologiques" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-3">Innovations Technologiques</h3>
+<p class="text-gray-600 mb-4">Plongez dans les avancées technologiques qui ont façonné l'aviation moderne, des matériaux composites aux systèmes de navigation et cockpits numériques.</p>
+<a href="https://readdy.ai/home/b0a5c965-952e-46c2-8992-b4edc19aa628/6fa4dbeb-c7b6-4e0b-b381-d4dbac8c9c72" data-readdy="true" class="inline-block bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-button font-medium transition !rounded-button whitespace-nowrap">En savoir plus</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- A320 Feature Section -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2">
+<h2 class="text-3xl font-bold mb-6">L'Airbus A320: Une Révolution dans l'Aviation</h2>
+<p class="text-gray-600 mb-4">L'Airbus A320 a marqué un tournant dans l'histoire de l'aviation commerciale avec l'introduction du système de commandes de vol électriques (fly-by-wire) et des cockpits entièrement numériques.</p>
+<p class="text-gray-600 mb-6">Lancé en 1988, cet avion moyen-courrier est devenu l'un des appareils les plus vendus au monde, avec plus de 10 000 exemplaires livrés à ce jour.</p>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="bg-gray-50 p-4 rounded-lg">
+<p class="text-sm text-gray-500">Envergure</p>
+<p class="font-bold">35,8 mètres</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<p class="text-sm text-gray-500">Longueur</p>
+<p class="font-bold">37,6 mètres</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<p class="text-sm text-gray-500">Vitesse de croisière</p>
+<p class="font-bold">840 km/h</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<p class="text-sm text-gray-500">Autonomie</p>
+<p class="font-bold">6 100 km</p>
+</div>
+</div>
+<a href="https://readdy.ai/home/b0a5c965-952e-46c2-8992-b4edc19aa628/81c542b0-2754-4e13-8712-fbdcdc757c51" data-readdy="true" class="inline-block bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-button font-medium transition shadow-lg hover:shadow-xl !rounded-button whitespace-nowrap">Découvrir la famille A320</a>
+</div>
+<div class="md:w-1/2">
+<img src="https://public.readdy.ai/ai/img_res/8af74e01ab9e34c9aa664cd5faec9397.jpg" alt="Cockpit A320" class="w-full h-auto rounded-lg shadow-xl">
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section id="galerie" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl font-bold text-center mb-6">Galerie Photo</h2>
+<p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">Explorez notre collection d'images retraçant l'évolution de l'aviation, des premiers prototypes aux avions modernes.</p>
+<div class="mb-8 flex flex-wrap justify-center gap-4">
+<button class="bg-primary text-white px-4 py-2 rounded-button font-medium !rounded-button whitespace-nowrap">Tous</button>
+<button class="bg-white text-gray-700 px-4 py-2 rounded-button font-medium hover:bg-gray-100 !rounded-button whitespace-nowrap">Avions Commerciaux</button>
+<button class="bg-white text-gray-700 px-4 py-2 rounded-button font-medium hover:bg-gray-100 !rounded-button whitespace-nowrap">Aviation Militaire</button>
+<button class="bg-white text-gray-700 px-4 py-2 rounded-button font-medium hover:bg-gray-100 !rounded-button whitespace-nowrap">Avions Historiques</button>
+<button class="bg-white text-gray-700 px-4 py-2 rounded-button font-medium hover:bg-gray-100 !rounded-button whitespace-nowrap">Famille A320</button>
+</div>
+<div class="gallery-grid">
+<div class="gallery-item rounded-lg overflow-hidden shadow-md">
+<img src="https://public.readdy.ai/ai/img_res/d66841252e6828eb7b42dc7134b5da4a.jpg" alt="A320neo en vol" class="w-full h-full object-cover">
+<div class="p-3 bg-white">
+<p class="font-medium">Airbus A320neo en vol</p>
+<p class="text-sm text-gray-500">La version améliorée avec de nouveaux moteurs</p>
+</div>
+</div>
+<div class="gallery-item rounded-lg overflow-hidden shadow-md">
+<img src="https://public.readdy.ai/ai/img_res/d025ecd9e357d8adaa733f8458c30968.jpg" alt="Frères Wright" class="w-full h-full object-cover">
+<div class="p-3 bg-white">
+<p class="font-medium">Premier vol des frères Wright (1903)</p>
+<p class="text-sm text-gray-500">Le début de l'aviation motorisée</p>
+</div>
+</div>
+<div class="gallery-item rounded-lg overflow-hidden shadow-md">
+<img src="https://public.readdy.ai/ai/img_res/94c3cca5175971971d02d2f38c24a3d9.jpg" alt="Ligne d'assemblage A320" class="w-full h-full object-cover">
+<div class="p-3 bg-white">
+<p class="font-medium">Ligne d'assemblage de l'A320</p>
+<p class="text-sm text-gray-500">Usine Airbus de Toulouse</p>
+</div>
+</div>
+<div class="gallery-item rounded-lg overflow-hidden shadow-md">
+<img src="https://public.readdy.ai/ai/img_res/c6902af5248158e15fefa7a7164f7b22.jpg" alt="Spitfire" class="w-full h-full object-cover">
+<div class="p-3 bg-white">
+<p class="font-medium">Spitfire</p>
+<p class="text-sm text-gray-500">Chasseur emblématique de la Seconde Guerre mondiale</p>
+</div>
+</div>
+<div class="gallery-item rounded-lg overflow-hidden shadow-md">
+<img src="https://public.readdy.ai/ai/img_res/e4a73ef73dfa166b0136d9f0ed53e266.jpg" alt="Concorde" class="w-full h-full object-cover">
+<div class="p-3 bg-white">
+<p class="font-medium">Concorde</p>
+<p class="text-sm text-gray-500">L'ère du transport supersonique (1976-2003)</p>
+</div>
+</div>
+<div class="gallery-item rounded-lg overflow-hidden shadow-md">
+<img src="https://public.readdy.ai/ai/img_res/c7b4e715ed33a7755ef52471b19d3f87.jpg" alt="Cockpit A320" class="w-full h-full object-cover">
+<div class="p-3 bg-white">
+<p class="font-medium">Cockpit de l'A320</p>
+<p class="text-sm text-gray-500">Le système fly-by-wire révolutionnaire</p>
+</div>
+</div>
+</div>
+<div class="text-center mt-10">
+<button id="loadMoreBtn" class="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-button font-medium hover:bg-gray-50 transition !rounded-button whitespace-nowrap">Voir plus de photos</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const galleryGrid = document.querySelector('.gallery-grid');
+  let page = 1;
+  
+  // Données des photos supplémentaires
+  const additionalPhotos = [
+    {
+      image: "https://public.readdy.ai/ai/img_res/4ed14a868532844f0088e84edc1fce0e.jpg",
+      title: "Boeing 747",
+      description: "Le légendaire Jumbo Jet qui a révolutionné le transport aérien"
+    },
+    {
+      image: "https://public.readdy.ai/ai/img_res/a45c62f554fa9448837b490ec613d875.jpg",
+      title: "Vue de l'aile de l'A320",
+      description: "Perspective depuis le hublot d'un passager"
+    },
+    {
+      image: "https://public.readdy.ai/ai/img_res/1a0e365d64ba3cc6f96af6b86457c6f0.jpg",
+      title: "F-22 Raptor",
+      description: "Chasseur furtif de 5ème génération"
+    },
+    {
+      image: "https://public.readdy.ai/ai/img_res/66c81ead36fc7515aaba418d95e51c97.jpg",
+      title: "A320 à l'atterrissage",
+      description: "Phase finale d'approche au coucher du soleil"
+    },
+    {
+      image: "https://public.readdy.ai/ai/img_res/79913ad38f784aac934e2f01a609bc47.jpg",
+      title: "Biplan historique",
+      description: "Les débuts de l'aviation commerciale"
+    },
+    {
+      image: "https://public.readdy.ai/ai/img_res/4325a3b2929e319aa5cc132945da3a0a.jpg",
+      title: "Maintenance de l'A320",
+      description: "Travaux techniques dans un hangar Airbus"
+    }
+  ];
+  
+  // Fonction pour créer un élément de galerie
+  function createGalleryItem(photo, index) {
+    const galleryItem = document.createElement('div');
+    galleryItem.className = 'gallery-item rounded-lg overflow-hidden shadow-md';
+    
+    // Ajouter des classes spéciales pour certains éléments (comme dans la galerie originale)
+    if (index % 3 === 0) {
+      galleryItem.classList.add('grid-row-span-2');
+    }
+    if (index % 4 === 3) {
+      galleryItem.classList.add('grid-col-span-2');
+    }
+    
+    galleryItem.innerHTML = `
+      <img src="${photo.image}" alt="${photo.title}" class="w-full h-full object-cover">
+      <div class="p-3 bg-white">
+        <p class="font-medium">${photo.title}</p>
+        <p class="text-sm text-gray-500">${photo.description}</p>
+      </div>
+    `;
+    
+    return galleryItem;
+  }
+  
+  // Gestionnaire d'événement pour le bouton "Voir plus de photos"
+  loadMoreBtn.addEventListener('click', function() {
+    // Afficher un indicateur de chargement
+    loadMoreBtn.innerHTML = '<i class="ri-loader-4-line ri-spin"></i> Chargement...';
+    loadMoreBtn.disabled = true;
+    
+    // Simuler un délai de chargement
+    setTimeout(function() {
+      // Ajouter les nouvelles photos à la galerie
+      additionalPhotos.forEach((photo, index) => {
+        const galleryItem = createGalleryItem(photo, index);
+        galleryGrid.appendChild(galleryItem);
+      });
+      
+      // Mettre à jour le bouton
+      page++;
+      if (page >= 3) {
+        loadMoreBtn.style.display = 'none'; // Cacher le bouton après 2 pages
+      } else {
+        loadMoreBtn.innerHTML = 'Voir plus de photos';
+        loadMoreBtn.disabled = false;
+      }
+      
+      // Animation simple pour les nouveaux éléments
+      const newItems = galleryGrid.querySelectorAll('.gallery-item:nth-last-child(-n+6)');
+      newItems.forEach((item, i) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        
+        setTimeout(() => {
+          item.style.opacity = '1';
+          item.style.transform = 'translateY(0)';
+        }, i * 100);
+      });
+    }, 800);
+  });
+});
+</script>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-20 bg-primary bg-opacity-5">
+<div class="container mx-auto px-6">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-3xl font-bold mb-4">Restez informé</h2>
+<p class="text-gray-600 mb-8">Abonnez-vous à notre newsletter pour recevoir les dernières actualités et mises à jour sur l'histoire de l'aviation.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<input type="email" placeholder="Votre adresse email" class="px-4 py-3 rounded-button border-none shadow-md focus:outline-none focus:ring-2 focus:ring-primary sm:w-80">
+<button class="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-button font-medium transition shadow-md hover:shadow-lg !rounded-button whitespace-nowrap">S'abonner</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer id="contact" class="bg-gray-800 text-white pt-16 pb-8">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div>
+<h3 class="text-xl font-bold mb-4">Histoire des Avions</h3>
+<p class="text-gray-300 mb-6">Votre source d'information sur l'évolution de l'aviation, des premiers vols aux avions modernes.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition">
+<i class="ri-youtube-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Liens Rapides</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-300 hover:text-white transition">Accueil</a></li>
+<li><a href="#chronologie" class="text-gray-300 hover:text-white transition">Chronologie</a></li>
+<li><a href="#types" class="text-gray-300 hover:text-white transition">Types d'Avions</a></li>
+<li><a href="#galerie" class="text-gray-300 hover:text-white transition">Galerie</a></li>
+<li><a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Catégories</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-300 hover:text-white transition">Avions Commerciaux</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition">Aviation Militaire</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition">Avions Historiques</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition">Innovations Technologiques</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition">Famille Airbus</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Contact</h3>
+<ul class="space-y-4">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mt-1 mr-3 text-gray-400">
+<i class="ri-map-pin-line"></i>
+</div>
+<span class="text-gray-300">15 Rue de l'Aviation, 31700 Toulouse, France</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-3 text-gray-400">
+<i class="ri-phone-line"></i>
+</div>
+<span class="text-gray-300">+33 5 61 XX XX XX</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-3 text-gray-400">
+<i class="ri-mail-line"></i>
+</div>
+<span class="text-gray-300">contact@histoireavions.fr</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Histoire des Avions. Tous droits réservés.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-400 text-sm hover:text-white transition">Politique de confidentialité</a>
+<a href="#" class="text-gray-400 text-sm hover:text-white transition">Conditions d'utilisation</a>
+<a href="#" class="text-gray-400 text-sm hover:text-white transition">Mentions légales</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
